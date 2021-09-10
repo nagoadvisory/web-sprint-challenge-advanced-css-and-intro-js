@@ -249,22 +249,28 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
+ 
+  //create an empty array to house the output
   let newArray =[];
-  let datacopy = array; 
-  let xxx = datacopy.years;
-    let yearuno = xxx.split(' - ');
-    let birthyear = Number(xxx[0]);
-    let deathyear = Number(xxx[1]);
 
-  for (let i=0; i<datacopy.length; i++){
-    if (datacopy[i].birthyear > 1900 && datacopy[i].deathyear <2000){
-      newArray.push(datacopy[i].name);
+  for (let i=0; i<array.length; i++){
+    //create a variable(s) that is the just the years variable
+    let xxx = array[i].years;
+
+    // this is how to split the string years
+    let yearuno = xxx.split(' - ');
+ 
+    //This is how I convert the 1st and 2nd part of the string from above into Numbers, which will be used in the if/then filter
+    let birthyear = Number(yearuno[0]);
+    let deathyear = Number(yearuno[1]);
+    if (birthyear > 1900 && deathyear < 2000){
+      newArray.push(array[i].name);
+    }
   }
   return newArray;
-  }
 }
 
-// "years": "1884 - 1920",
+console.log(get20s(artists));
 
 
 
