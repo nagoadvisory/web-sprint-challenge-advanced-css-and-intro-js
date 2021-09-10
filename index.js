@@ -274,8 +274,6 @@ function removeArtist(array,indexnumber) {
 }
 
 
-
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive an array
@@ -292,7 +290,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
+function addArtist(array) {
+  let createdArtist = {
+    id: 20,
+    name: 'Krishan Nagin',
+    years: '1993 - current day',
+    genre: 'Web Design',
+    nationality: 'Indian',
+    bio: 'I like to code code code. And eat apples and bananas'
+  }
+  array.push(createdArtist);
+  return array;
+  
   /*Your Code Here*/
 }
 
@@ -305,8 +314,8 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array, quantity) {
+  let newArray = [];
 }
 
 
